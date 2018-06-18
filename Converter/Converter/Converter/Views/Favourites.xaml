@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Converter.Views.Favourites"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>-->
+        <Grid Grid.Row="0">
+            <ListView x:Name="CurrencyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView Padding="5">
+                                <Frame OutlineColor="CadetBlue"
+                                       Padding="2">
+                                    <StackLayout Orientation="Horizontal" Spacing="10" Padding="0"   >
+
+                                        <Image HorizontalOptions="StartAndExpand"
+                                               Source="{Binding ImageUrl}" />
+
+                                        <Label Text="{Binding Name}"
+                                               FontSize="11" 
+                                               TextColor="Red"
+                                               HorizontalOptions="CenterAndExpand"/>
+
+
+                                        <Label Text="{Binding shortName}" 
+                                               HorizontalOptions="EndAndExpand"
+                                               FontAttributes="Bold"/>
+
+
+                                    </StackLayout>
+                                </Frame>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </Grid>
+        <Grid Grid.Row="1">
+            
+        </Grid>
+    </Grid>
+</ContentPage>
